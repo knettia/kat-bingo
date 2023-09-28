@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Background Color</title>
+    <title>Bingo Card</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            width: 100%;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.5s;
+        }
+
+        #bingo-card {
+            width: 90vw;
+            height: 90vw; /* Make the card square */
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 0;
+            border: 2px solid #000;
+        }
+
+        .bingo-square {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
-    <script>
-        // Function to generate a random color in hex format
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        // Function to set the random background color
-        function changeBackgroundColor() {
-            document.body.style.backgroundColor = getRandomColor();
-        }
-
-        // Change the background color initially
-        changeBackgroundColor();
-
-        // Change the background color on a timer (every 2 seconds in this example)
-        setInterval(changeBackgroundColor, 2000);
-    </script>
+    <div id="bingo-card"></div>
+    <script src="script.js"></script>
 </body>
 </html>
