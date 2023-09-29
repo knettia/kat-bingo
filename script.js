@@ -57,6 +57,7 @@ const possibleItems = [
     { text: "\"bro this game\"", weight: 10},
     { text: "tries to get up the towers", weight: 25},
     { text: "2 guns", weight: 10},
+    { text: "2 in 1 shot", weight: 75},
 
     { text: "leaves in lobby", weight: 50},
     { text: "leaves before even playing", weight: 25},
