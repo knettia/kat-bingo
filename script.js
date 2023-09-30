@@ -2,7 +2,7 @@ const bingoCard = document.getElementById("bingo-card");
 
 const possibleItems = [
     { text: "noob using spengy", weight: 5},
-    { text: "spengy + flaregun", weight: 1},
+    { value: '<p>spengy + <img class="inline-image" src="textures/flaregun.png" alt="flaregun"></p>', weight: 1},
     { text: "spengy + crescendo", weight: 1},
 
     { text: "blatant exploiter", weight: 5},
