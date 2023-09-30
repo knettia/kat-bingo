@@ -18,6 +18,8 @@ const possibleItems = [
 
     { text: "dabbing", weight: 10},
     { text: "kazotsky kick", weight: 10},
+    { text: "fucks your body in lobby", weight: 25},
+    { text: "non-english swearing", weight: 25},
 
     { text: "shotgun knife", weight: 50},
 
