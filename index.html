@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAT Bingo</title>
-    <link rel="icon" href="textures/kat-logo.png" type="image/png">
+    <link rel="icon" href="textures/kat_logo.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -25,6 +25,7 @@
             flex-direction: column;
             align-items: center;
             padding: 25px;
+            background-color: #ffffff;
         }
 
         #bingo-labels {
@@ -60,7 +61,6 @@
             justify-content: center;
             align-items: center;
             background-color: #ffffff;
-            /* padding-top: 100%; Maintain a square cell */
             text-align: center;
             font-size: calc(.6vw + .6vh + .3vmin);
             position: relative;
@@ -74,17 +74,17 @@
             width: 100%;
             height: 100%;
             transition: transform 0.2s;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            justify-content: center;
+            align-items: center;
 
-            white-space: wrap; /* Changed 'wrap' to 'nowrap' for better handling */
-            text-align: center; /* Text alignment within the element */
+            white-space: wrap;
+            text-align: center;
         }
 
         img.inline-image {
-            width: 1.5em; /* Adjust the width to make it a bit bigger */
-            height: 1.5em; /* Maintain a 1:1 aspect ratio */
-            vertical-align: middle; /* Align the image vertically with the text */
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
         }
 
         .bingo-square:active .square-text {
@@ -113,11 +113,15 @@
             height: 95%;
             user-select: none;
         }
+
+        copyrightLink:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div id="bingo-container">
-        <div id="bingo-title">KAT Bingo TESTING</div>
+        <div id="bingo-title">KAT Bingo</div>
         <div id="bingo-labels">
             <div class="bingo-label">B</div>
             <div class="bingo-label">I</div>
@@ -127,6 +131,19 @@
         </div>
         <div id="bingo-card"></div>
     </div>
+    <!-- <button id="captureButton">Capture KAT bingo</button> -->
+    <div>
+        <button id="captureButton">Capture KAT bingo</button>
+        <input type="checkbox" id="downloadCheckbox">
+        <label for="downloadCheckbox" title="if active, the image will be downloaded to your computer,\n else, the image will be copied to your clipboard">Download</label>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.js"></script>
     <script src="script.js"></script>
+    <div style="position: fixed; bottom: 10px; left: 10px; font-size: 12px; color: #888;">
+        Open Source &nbsp;|&nbsp; Copyright © Amelia Gäßler (@knettia) &nbsp;|&nbsp;
+        <a id="copyrightLink" href="https://github.com/knettia/kat-bingo/tree/main" target="_blank" style="color: #888; text-decoration: none;">
+            GitHub Repository
+        </a>
+    </div>
 </body>
 </html>
