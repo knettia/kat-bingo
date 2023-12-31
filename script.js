@@ -146,7 +146,7 @@ async function write_img(clip) {
                     [blob.type]: blob,
                 }),
             ]);
-            console.log("Fetched image copied.");
+            console.log("Should fix html2canvas lib problems!.");
         }
     } catch (err) {
         console.error(err.name, err.message);
