@@ -91,7 +91,7 @@ function generateBingoCard() {
             }
         } else {
             const markImage2 = document.createElement("img");
-            markImage2.src = "textures/DOOM-kat_logo.png";
+            markImage2.src = "textures/kat_logo_new.png";
             markImage2.classList.add("square-image");
             markImage2.style.width = "100%";
             markImage2.style.height = "100%";
