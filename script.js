@@ -45,7 +45,7 @@ function generateBingoCard() {
                 if("text" in selectedItem) {
                     const textElement = document.createElement("div");
                     textElement.classList.add("square-text");
-                    textElement.innerHTML = "<p>" + selectedItem.text + "</p>"; // TODO: add each word individually, not important as it works right now!
+                    textElement.innerHTML = "<p>" + selectedItem.text + "</p>";
                     square.appendChild(textElement);
                 }
 
